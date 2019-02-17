@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Cambit</string>
+    <string name="temp_text">Este texto será alterado</string>
+    <string name="temp2_text">Este texto esta alterado</string>
+    <string name="loading">Carregando...</string>
+    <string name="ready">pronto</string>
 </resources>

@@ -8,4 +8,18 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Image">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:scaleType">fitCenter</item>
+    </style>
+
+    <style name="Separator">
+        <item name="android:background">@color/separator</item>
+    </style>
+
+    <style name="Separator.Horizontal" parent="Separator">
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_width">0dp</item>
+    </style>
+
 </resources>
