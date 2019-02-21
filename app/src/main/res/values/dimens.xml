@@ -4,4 +4,6 @@
     <dimen name="horizontal_margin">16dp</dimen>
 
     <dimen name="product_size">64dp</dimen>
+
+
 </resources>
