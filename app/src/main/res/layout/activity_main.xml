@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFEAE9FE"
-    android:orientation="vertical"
-    tools:context=".view.screen.main.MainActivity">
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f3f3f4"
+        android:orientation="vertical"
+        tools:context=".view.screen.main.MainActivity">
     <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editScreenBox"
             android:layout_width="match_parent"
             android:background="@drawable/screenbox"
-            android:layout_height="55dp"
+            android:layout_height="wrap_content"
             android:paddingLeft="60dp"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
@@ -36,16 +36,16 @@
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/orderButtonImage"
-                        android:layout_width="130dp"
-                        android:layout_height="45dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/orderimgbutton"
                         android:layout_marginLeft="7.5dp"
                         android:layout_marginTop="4dp"/>
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/filterButtonImage"
-                        android:layout_width="120dp"
-                        android:layout_height="50dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:background="@drawable/filterimgbutton"
                         android:layout_marginLeft="5dp"
                         android:layout_marginTop="4dp"/>
@@ -73,7 +73,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
             android:gravity="center_horizontal"
-            android:background="#ab3ff5"
+            android:background="#5195fb"
             android:weightSum="4"
             android:layout_alignParentStart="true">
 
