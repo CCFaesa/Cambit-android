@@ -28,5 +28,30 @@
 
     <dimen name="locationText_marginBotton">7dp</dimen>
 
+///MainActivity
+
+    <dimen name="editScreenBox_margin">5dp</dimen>
+
+    <dimen name="editScreenBox_paddingLeft">60dp</dimen>
+    
+    <dimen name="lineardalista_marginTop">15dp</dimen>
+
+    <dimen name="buttonorder_marginLeft">7.5dp</dimen>
+
+    <dimen name="buttonsfilteorden_marginTop">4dp</dimen>
+
+    <dimen name="buttonorfilter_marginLeft">5dp</dimen>
+
+    <dimen name="recycleview_marginLaterial">7.5dp</dimen>
+
+    <dimen name="recycleview_marginTop">10dp</dimen>
+
+    <dimen name="recycleview_marginBottom">55dp</dimen>
+
+    <dimen name="iconBarra_marginTopeBottom">10dp</dimen>
+
+    <dimen name="iconBarra_marginBottom">10dp</dimen>
+
+
 
 </resources>

@@ -12,11 +12,11 @@
             android:id="@+id/editScreenBox"
             android:layout_width="match_parent"
             android:background="@drawable/screenbox"
+            android:paddingLeft="@dimen/editScreenBox_paddingLeft"
             android:layout_height="wrap_content"
-            android:paddingLeft="60dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="@dimen/editScreenBox_margin"
+            android:layout_marginRight="@dimen/editScreenBox_margin"
+            android:layout_marginTop="@dimen/editScreenBox_margin"/>
 
     <androidx.core.widget.NestedScrollView
             android:id="@+id/nestedScrollView"
@@ -31,7 +31,7 @@
 
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="match_parent"
-                          android:layout_marginTop="15dp"
+                          android:layout_marginTop="@dimen/lineardalista_marginTop"
                           android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatImageButton
@@ -39,16 +39,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/orderimgbutton"
-                        android:layout_marginLeft="7.5dp"
-                        android:layout_marginTop="4dp"/>
+                        android:layout_marginLeft="@dimen/buttonorder_marginLeft"
+                        android:layout_marginTop="@dimen/buttonsfilteorden_marginTop"/>
 
                 <androidx.appcompat.widget.AppCompatImageButton
                         android:id="@+id/filterButtonImage"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/filterimgbutton"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginTop="4dp"/>
+                        android:layout_marginLeft="@dimen/buttonorfilter_marginLeft"
+                        android:layout_marginTop="@dimen/buttonsfilteorden_marginTop"/>
 
             </LinearLayout>
 
@@ -57,67 +57,81 @@
                     android:id="@+id/mainRecItems"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="55dp"
-                    android:layout_marginRight="7.5dp"
-                    android:layout_marginLeft="7.5dp"/>
+                    android:layout_marginTop="@dimen/recycleview_marginTop"
+                    android:layout_marginBottom="@dimen/recycleview_marginBottom"
+                    android:layout_marginRight="@dimen/recycleview_marginLaterial"
+                    android:layout_marginLeft="@dimen/recycleview_marginLaterial"/>
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
 
-    <androidx.appcompat.widget.FitWindowsLinearLayout
+    <LinearLayout
             android:id="@+id/auxBar"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            android:gravity="center_horizontal"
             android:background="#5195fb"
-            android:weightSum="4"
-            android:layout_alignParentStart="true">
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp">
+
+        <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/rodapeHome_Id"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/home"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="33dp"
-                android:layout_weight="1"/>
+                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
+        />
+        <Space
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/rodapeWallet_Id"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/wallet"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="60dp"
-                android:layout_weight="1"/>
+                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
+        />
+        <Space
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/rodapeChest_Id"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:background="@drawable/chest"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="60dp"
-                android:layout_weight="1"
+                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
         />
+        <Space
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/rodapeUser_Id"
                 android:background="@drawable/user"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
-                android:layout_marginLeft="60dp"
-                android:layout_marginRight="33dp"
-                android:layout_weight="1"/>
-    </androidx.appcompat.widget.FitWindowsLinearLayout>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
+        />
+        <Space
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"/>
+    </LinearLayout>
 
 </RelativeLayout>
