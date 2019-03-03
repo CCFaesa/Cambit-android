@@ -54,7 +54,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                     android:id="@+id/ciFavorite"
                     style="@style/Image"
-                    android:background="@drawable/coracionfalse"
+                    android:background="@drawable/favoritebuttonfalse"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:layout_constraintTop_toTopOf="parent"
