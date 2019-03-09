@@ -5,9 +5,10 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#f3f3f4"
+        android:background="@color/backScreenMain"
         android:orientation="vertical"
         tools:context=".view.screen.main.MainActivity">
+
     <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editScreenBox"
             android:layout_width="match_parent"
@@ -24,6 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/editScreenBox">
+
         <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -31,7 +33,7 @@
 
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="match_parent"
-                          android:layout_marginTop="@dimen/lineardalista_marginTop"
+                          android:layout_marginTop="@dimen/listlinear_marginTop"
                           android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatImageButton
@@ -66,13 +68,13 @@
     </androidx.core.widget.NestedScrollView>
 
     <LinearLayout
-            android:id="@+id/auxBar"
+            android:id="@+id/footeBar"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="0dp"
-            android:background="#5195fb"
+            android:background="@color/corBarMenuBack"
             android:layout_alignParentStart="true"
             android:layout_marginStart="0dp">
 
@@ -82,52 +84,52 @@
                 android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/rodapeHome_Id"
+                android:id="@+id/homeFooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/home"
-                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
-                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
-        />
+                android:layout_marginTop="@dimen/iconBar_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBar_marginTopeBottom"/>
+
         <Space
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/rodapeWallet_Id"
+                android:id="@+id/walletFooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/wallet"
-                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
-                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
-        />
+                android:layout_marginTop="@dimen/iconBar_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBar_marginTopeBottom"/>
+
         <Space
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/rodapeChest_Id"
+                android:id="@+id/chestFooter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/chest"
-                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
-                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
-        />
+                android:layout_marginTop="@dimen/iconBar_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBar_marginTopeBottom"/>
+
         <Space
                 android:layout_weight="2"
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"/>
 
         <androidx.appcompat.widget.AppCompatImageButton
-                android:id="@+id/rodapeUser_Id"
+                android:id="@+id/userFooter"
                 android:background="@drawable/user"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/iconBarra_marginTopeBottom"
-                android:layout_marginBottom="@dimen/iconBarra_marginTopeBottom"
-        />
+                android:layout_marginTop="@dimen/iconBar_marginTopeBottom"
+                android:layout_marginBottom="@dimen/iconBar_marginTopeBottom"/>
+
         <Space
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
