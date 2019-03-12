@@ -18,6 +18,16 @@ android {
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
+
+        manifestPlaceholders = [
+                backapp_server_url: secretProperties["BACKAPP_SERVER_URL"],
+                backapp_app_id    : secretProperties["BACKAPP_APP_ID"],
+                backapp_client_key: secretProperties["BACKAPP_CLIENT_KEY"]
+        ]
+
+        buildConfigField("String", "BACKAPP_SERVER_URL", "\"${secretProperties["BACKAPP_SERVER_URL"]}\"")
+        buildConfigField("String", "BACKAPP_APP_ID", "\"${secretProperties["BACKAPP_APP_ID"]}\"")
+        buildConfigField("String", "BACKAPP_CLIENT_KEY", "\"${secretProperties["BACKAPP_CLIENT_KEY"]}\"")
     }
     buildTypes {
         release {
@@ -44,7 +54,7 @@ ext {
     androidx_version = "1.1.0-alpha02"
     androidX_support_version = '1.1.0-alpha02'
     constraint_layout_version = '2.0.0-alpha3'
-    android_material_version = '1.1.0-alpha03'
+    android_material_version = '1.1.0-alpha04'
     glide_version = '4.8.0'
 
     parse_server_version = "1.16.3"
@@ -73,11 +83,8 @@ dependencies {
 
     //CARDVIEW
     implementation "androidx.cardview:cardview:1.0.0"
-
-
-    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     testImplementation "junit:junit:4.12"
+
     androidTestImplementation "androidx.test:runner:1.1.2-alpha01"
     androidTestImplementation "androidx.test.espresso:espresso-core:3.1.2-alpha01"
 }
