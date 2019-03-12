@@ -1,49 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/cardItem_margin"
+    android:layout_marginBottom="@dimen/cardItem_margin"
+    app:cardCornerRadius="@dimen/cardItem_Radius">
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/ciImgItem"
-        style="@style/Image"
-        android:layout_width="@dimen/product_size"
-        android:layout_height="@dimen/product_size"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintDimensionRatio="H,1:1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@mipmap/ic_launcher" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/ciTxtItem"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/horizontal_margin"
-        android:layout_marginEnd="@dimen/horizontal_margin"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ciImgItem"
-        app:layout_constraintTop_toTopOf="@id/ciImgItem"
-        tools:text="Item 01" />
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ciImgItem"
+                    style="@style/Image"
+                    android:layout_width="@dimen/product_size"
+                    android:layout_height="@dimen/product_size"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    tools:srcCompat="@mipmap/ic_launcher"
+                    app:layout_constraintStart_toStartOf="parent"
+            />
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/ciTxtPrice"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="22sp"
-        app:layout_constraintStart_toStartOf="@id/ciTxtItem"
-        app:layout_constraintTop_toBottomOf="@id/ciTxtItem"
-        tools:text="123" />
+            <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ciEvaluation"
+                    style="@style/Image"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/note_heigth"
+                    tools:text="5.0"
+                    android:background="@drawable/backnotegreen"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="@dimen/note_marginEnd"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
 
-    <View
-        style="@style/Separator.Horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ciFavorite"
+                    style="@style/Image"
+                    android:background="@drawable/favoritebuttonfalse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/favorite_margin"
+                    android:layout_marginEnd="@dimen/favorite_margin"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ciTxtItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizePriceDecription"
+                    tools:text="Item 01"
+                    android:layout_marginStart="@dimen/textItem_marginStart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="@dimen/textItem_marginTop"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ciTxtPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textSizePriceDecription"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:text="123"
+                    android:layout_marginStart="@dimen/textPrice_marginStart"
+                    app:layout_constraintTop_toBottomOf="@+id/ciTxtItem"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ciIconLocation"
+                    style="@style/Image"
+                    android:background="@drawable/caminho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/location_margin"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginBottom="@dimen/location_margin"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/ciLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/LocationText_size"
+                    android:text="Localizacao"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="@dimen/locationText_margin"
+                    android:layout_marginBottom="@dimen/locationText_marginBotton"/>
+            <View
+                    style="@style/Separator.Horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

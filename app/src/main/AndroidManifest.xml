@@ -13,7 +13,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".view.screen.itemdetails.ItemDetailsActivity"></activity>
-        <activity android:name=".view.screen.main.MainActivity">
+        <activity android:name=".view.screen.main.MainActivity"
+                  android:windowSoftInputMode="stateHidden">
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

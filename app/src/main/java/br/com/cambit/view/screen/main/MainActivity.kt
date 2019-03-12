@@ -29,11 +29,11 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     override fun showLoadItemsDialog() {
-        mainTxtExample.setText(R.string.loading)
+//        mainTxtExample.setText(R.string.loading)
     }
 
     override fun hideLoadItemsDialog() {
-        mainTxtExample.setText(R.string.ready)
+//        mainTxtExample.setText(R.string.ready)
     }
 
     override fun showMessageError(message: String) {
@@ -41,7 +41,7 @@ class MainActivity : AppCompatActivity(), MainContract.View {
     }
 
     private fun setupViews() {
-        mainTxtExample.text = resources.getText(R.string.temp2_text)
+       // mainTxtExample.text = resources.getText(R.string.temp2_text)
         mainRecItems.layoutManager = LinearLayoutManager(this)
         mainRecItems.adapter = adapter
 

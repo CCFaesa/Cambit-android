@@ -2,6 +2,30 @@
 <resources>
     <dimen name="vertical_margin">16dp</dimen>
     <dimen name="horizontal_margin">16dp</dimen>
-
-    <dimen name="product_size">64dp</dimen>
+    <dimen name="cardItem_margin">5dp</dimen>
+    <dimen name="cardItem_Radius">10dp</dimen>
+    <dimen name="product_size">93dp</dimen>
+    <dimen name="note_heigth">30dp</dimen>
+    <dimen name="note_marginEnd">50dp</dimen>
+    <dimen name="favorite_margin">6dp</dimen>
+    <dimen name="textItem_marginStart">8dp</dimen>
+    <dimen name="textItem_marginTop">5dp</dimen>
+    <dimen name="textPrice_marginStart">8dp</dimen>
+    <dimen name="location_margin">8dp</dimen>
+    <dimen name="locationText_margin">25dp</dimen>
+    <dimen name="LocationText_size">17sp</dimen>
+    <dimen name="locationText_marginBotton">7dp</dimen>
+    <dimen name="textSizePriceDecription">22sp</dimen>
+///MainActivity
+    <dimen name="editScreenBox_margin">5dp</dimen>
+    <dimen name="editScreenBox_paddingLeft">60dp</dimen>
+    <dimen name="listlinear_marginTop">15dp</dimen>
+    <dimen name="buttonorder_marginLeft">7.5dp</dimen>
+    <dimen name="buttonsfilteorden_marginTop">4dp</dimen>
+    <dimen name="buttonorfilter_marginLeft">5dp</dimen>
+    <dimen name="recycleview_marginLaterial">7.5dp</dimen>
+    <dimen name="recycleview_marginTop">10dp</dimen>
+    <dimen name="recycleview_marginBottom">55dp</dimen>
+    <dimen name="iconBar_marginTopeBottom">10dp</dimen>
+    <dimen name="iconBar_marginBottom">10dp</dimen>
 </resources>
