@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.cambit">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:name=".base.App"
@@ -12,14 +14,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.screen.itemdetails.ItemDetailsActivity"></activity>
-        <activity android:name=".view.screen.main.MainActivity"
-                  android:windowSoftInputMode="stateHidden">
 
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="${backapp_server_url}" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="${backapp_app_id}" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="${backapp_client_key}" />
 
+        <activity android:name=".view.screen.itemdetails.ItemDetailsActivity" />
+        <activity
+            android:name=".view.screen.main.MainActivity"
+            android:windowSoftInputMode="stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
