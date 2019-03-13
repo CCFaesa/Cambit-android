@@ -6,7 +6,14 @@ import br.com.cambit.data.model.ServiceResponse
 import br.com.cambit.data.remote.parse.ParseItem
 
 class CambitParseServeRepository : CambitRepository {
+
     override suspend fun getItems(): ServiceResponse<List<Item>> {
         return ParseItem.findObjects()
+    }
+
+    override suspend fun getItems(query: String): ServiceResponse<List<Item>> {
+        return ParseItem.findObjects(
+            { ParseItem.whereContainsName(it, query) }
+        )
     }
 }
