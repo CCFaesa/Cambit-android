@@ -7,9 +7,15 @@ import com.parse.ParseQuery
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 
-suspend fun <T : Any> ParseTable<T>.findObjects(): ServiceResponse<List<T>> {
+suspend fun <T : Any> ParseTable<T>.findObjects(vararg functions:(ParseQuery<ParseObject>) -> Unit): ServiceResponse<List<T>> {
     return suspendCancellableCoroutine { continuation ->
-        ParseQuery<ParseObject>(this.table).findInBackground { items, e ->
+        val query = parseObject
+
+        functions.forEach {
+            it(query)
+        }
+
+        query.findInBackground { items, e ->
             if (e == null) {
                 continuation.resume(ServiceResponse.BODY(items.map { this.converter(it) }))
             } else {
